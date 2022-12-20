@@ -1,0 +1,72 @@
+Source: haskell-generic-deriving
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Uploaders: Clint Adams <clint@debian.org>
+Priority: optional
+Section: haskell
+Rules-Requires-Root: no
+Build-Depends: debhelper (>= 10),
+ cdbs,
+ haskell-devscripts (>= 0.13),
+ ghc (>= 8),
+ ghc-prof,
+ libghc-th-abstraction-dev (>= 0.3),
+ libghc-th-abstraction-dev (<< 0.4),
+ libghc-th-abstraction-prof,
+Build-Depends-Indep: ghc-doc,
+ libghc-th-abstraction-doc,
+Standards-Version: 4.1.4
+Homepage: http://hackage.haskell.org/package/generic-deriving
+Vcs-Browser: https://salsa.debian.org/haskell-team/DHG_packages/tree/master/p/haskell-generic-deriving
+Vcs-Git: https://salsa.debian.org/haskell-team/DHG_packages.git [p/haskell-generic-deriving]
+
+Package: libghc-generic-deriving-dev
+Architecture: any
+Depends: ${haskell:Depends},
+ ${shlibs:Depends},
+ ${misc:Depends},
+Recommends: ${haskell:Recommends},
+Suggests: ${haskell:Suggests},
+Provides: ${haskell:Provides},
+Description: generic programming library for generalised deriving${haskell:ShortBlurb}
+ This package provides functionality for generalising the deriving
+ mechanism in Haskell to arbitrary classes. It was first described
+ in the paper:
+ .
+ A generic deriving mechanism for Haskell. Jose Pedro Magalhaes, Atze
+ Dijkstra, Johan Jeuring, and Andres Loeh. Haskell'10.
+ .
+ ${haskell:Blurb}
+
+Package: libghc-generic-deriving-prof
+Architecture: any
+Depends: ${haskell:Depends},
+ ${misc:Depends},
+Recommends: ${haskell:Recommends},
+Suggests: ${haskell:Suggests},
+Provides: ${haskell:Provides},
+Description: generic programming library for generalised deriving${haskell:ShortBlurb}
+ This package provides functionality for generalising the deriving
+ mechanism in Haskell to arbitrary classes. It was first described
+ in the paper:
+ .
+ A generic deriving mechanism for Haskell. Jose Pedro Magalhaes, Atze
+ Dijkstra, Johan Jeuring, and Andres Loeh. Haskell'10.
+ .
+ ${haskell:Blurb}
+
+Package: libghc-generic-deriving-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends},
+ ${haskell:Depends},
+Recommends: ${haskell:Recommends},
+Suggests: ${haskell:Suggests},
+Description: generic programming library for generalised deriving${haskell:ShortBlurb}
+ This package provides functionality for generalising the deriving
+ mechanism in Haskell to arbitrary classes. It was first described
+ in the paper:
+ .
+ A generic deriving mechanism for Haskell. Jose Pedro Magalhaes, Atze
+ Dijkstra, Johan Jeuring, and Andres Loeh. Haskell'10.
+ .
+ ${haskell:Blurb}
