@@ -1,3 +1,9 @@
+haskell-generic-deriving (1.14.5-1deepin1) unstable; urgency=medium
+
+  * chore: Bump th-abstraction to << 0.8
+
+ -- hudeng <hudeng@deepin.org>  Mon, 22 Jul 2024 17:31:14 +0800
+
 haskell-generic-deriving (1.14.5-1) unstable; urgency=medium
 
   [ Ilias Tsitsimpis ]
