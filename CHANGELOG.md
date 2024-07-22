@@ -1,3 +1,21 @@
+# 1.14.5 [2023.08.06]
+* Support building with `template-haskell-2.21.*` (GHC 9.8).
+* The Template Haskell machinery now uses `TemplateHaskellQuotes` when
+  building with GHC 8.0+ instead of manually constructing each Template Haskell
+  `Name`. A consequence of this is that `generic-deriving` will now build with
+  GHC 9.8, as `TemplateHaskellQuotes` abstracts over some internal Template
+  Haskell changes introduced in 9.8.
+
+# 1.14.4 [2023.04.30]
+* Allow building with GHC backends where `HTYPE_SIG_ATOMIC_T` is not defined,
+  such as the WASM backend.
+* Place `INLINE [1]` pragmas on `from` and `to` implementations when types
+  don't have too many constructors or fields, following the heuristics that GHC
+  9.2+ uses for `Generic` deriving.
+
+# 1.14.3 [2023.02.27]
+* Support `th-abstraction-0.5.*`.
+
 # 1.14.2 [2022.07.23]
 * Fix a bug in which `deriveAll1` could generate ill kinded code when using
   `kindSigOptions=False`, or when using GHC 8.0 or earlier.
